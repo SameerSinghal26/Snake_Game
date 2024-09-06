@@ -1,0 +1,192 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Handjet&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Handjet", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "ELGR" 1,
+      "ELSH" 2;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #06141B;
+}
+
+#board3 {
+    position: relative;
+    border-radius: 100px;
+    display: grid;
+    grid-template-columns: repeat(20, 20px);
+    grid-template-rows: repeat(20, 20px);
+    margin: 5px;
+}
+
+.border2 {
+    border: #11212D solid 20px;
+    border-radius: 20px;
+    box-shadow: inset 0 0 0 5px #11212D;
+}
+
+.border1 {
+    border: #253745 solid 12px;
+    border-radius: 26px;
+    box-shadow: inset 0 0 0 10px #253745;
+}
+
+
+#instruction-text {
+    position: absolute;
+    top: calc(50% + 150px);
+    left: 50%;
+    transform: translateX(-50%);
+    color: #333;
+    width: 300px;
+    text-align: center;
+    text-transform: capitalize;
+} 
+
+.scores {
+    display: flex;
+    justify-content: space-between;
+}
+
+#score {
+    color: #CCD0CF;
+}
+
+#score, #highScore {
+    font-size: 40px;
+    font-weight: bolder;
+    margin: 10px 0;
+}
+
+#highScore {
+    color: #9BA8AB;
+}
+
+.border2,
+#logo {
+    background-color: #9BA8AB;
+}
+
+.snake {
+    border: #11212D 1px dotted;
+    background-color: #06141B;
+    border-radius: 40%;
+}
+
+.food {
+    background-color: #CCD0CF;
+    border: #253745 6px solid;
+    border-radius: 50%;
+}
+
+
+#logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: auto;
+}
+
+#keyboard {
+    display: none;
+    margin-right : 18px;
+    margin-top: 2em;
+    text-align: center;
+}
+
+#keyboard button {
+    display: inline-block;
+    font-family: 'Consolas', monospace;
+    font-size: 2em;
+    margin: 0.2em;
+    width: 1.5em;
+    height: 1.5em;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.3em;
+    transition: 0.12s ease-out;
+}
+
+button.up, button.left, button.down, button.right {
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    border: 3px solid white;
+    border-radius: 15%;
+    text-shadow: 0 0 0.075em white, 0 0 0.1em white, 0 0 0.15em var(--color1), 0 0 0.25em var(--color1);
+    box-shadow: 0 0 0.075em white inset, 0 0 0.1em white, 0 0 0.15em var(--color1) inset, 0 0 0.25em var(--color1);
+}
+
+button:active {
+    transform: translate(0, 4px);
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 0.075em white inset, 0 0 0.1em white, 0 0 0.15em white inset, 0 0 0.25em white;
+}
+
+@media screen and (max-width: 800px) {
+    #keyboard {
+        display: block !important; 
+        margin-top: 20px;
+    }
+
+    #keyboard button {
+        font-size: 1.5rem;
+        margin: 0.5em;
+    }
+
+    .border1 {
+        margin-bottom: 20px;
+    }
+
+    #logo {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        height: auto;
+    }
+
+    #instruction-text {
+        top: calc(50% + 80px);
+    }
+}
+
+#startButton {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    #startButton {
+        display: inline-block;
+        background-color: rgba(255, 255, 255, 0);
+        color: white;
+        border: 1px solid white;
+        border-radius: 15%;
+        text-shadow: 0 0 0.075em white, 0 0 0.1em white, 0 0 0.15em var(--color1), 0 0 0.25em var(--color1);
+        box-shadow: 0 0 0.075em white inset, 0 0 0.1em white, 0 0 0.15em var(--color1) inset, 0 0 0.25em var(--color1);
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 20px;
+        cursor: pointer;
+        margin-bottom: 6px;
+    }
+    #startButton:active {
+        transform: translate(0, 4px);
+        background-color: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 0 0.075em white inset, 0 0 0.1em white, 0 0 0.15em white inset, 0 0 0.25em white;
+    }
+    
+}

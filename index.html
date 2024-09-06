@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake_game</title>
+    <link rel="icon" href="./images/icons8-joystick-100.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="scores">
+            <h1 id="score">000</h1>
+            <button id="startButton">Start Game</button>
+            <h1 id="highScore">000</h1>
+        </div>
+        <div class="border1">
+            <div class="border2">
+                <div id="board3" class="box"></div>
+            </div>
+        </div>
+        <h1 id="instruction-text">Press Space / Button to start the game</h1>
+        <img id="logo" src="./images/fotor-ai-2024090105928-removebg-preview.png" alt="snake-logo" />
+        <div id="keyboard">
+            <button class="up" onclick="virtualKey(38)">↑</button><br>
+            <button class="left" onclick="virtualKey(37)">←</button>
+            <button class="down" onclick="virtualKey(40)">↓</button>
+            <button class="right" onclick="virtualKey(39)">→</button>
+        </div>
+    </div>
+    <script src="javascript.js" defer></script>
+</body>
+</html>
